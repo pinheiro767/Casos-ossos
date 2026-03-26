@@ -1,6 +1,7 @@
+// manifest.json
 {
-  "name": "Casos Clínicos EF",
-  "short_name": "Casos EF",
+  "name": "Anatomia Clínica Interativa",
+  "short_name": "Anatomia Clínica",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0b1020",
