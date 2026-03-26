@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Casos Clínicos EF - PWA Completo</title>
+<title>Casos Clínicos EF - COMPLETO</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0b1020"><style>
 body{margin:0;font-family:Arial;background:#0b1020;color:#fff}
@@ -14,219 +14,218 @@ textarea{width:100%;padding:10px;border-radius:10px;margin-top:10px}
 img{width:100%;margin-top:10px;border-radius:10px}
 </style></head><body>
 <div class="container">
-<h2>Casos Clínicos – Educação Física</h2>
+<h2>Casos Clínicos – Educação Física (30 Casos COMPLETOS)</h2>
 <div id="casos"></div>
 </div><script>
 
 const CASOS = [
 {
  titulo:"Fratura de clavícula",
- texto:"Aluno caiu com braço estendido e apresenta dor intensa no ombro.",
- pergunta:"Identifique ossos, divisão do esqueleto, termos anatômicos da lesão e plano do movimento.",
- resposta:"Clavícula e escápula; esqueleto apendicular; lateral e proximal; plano frontal."
+ texto:"Aluno caiu com braço estendido durante jogo e apresenta dor intensa no ombro com deformidade.",
+ pergunta:"a) Ossos envolvidos? b) Divisão do esqueleto? c) Termos anatômicos? d) Plano do movimento?",
+ resposta:"Clavícula e escápula; apendicular; lateral e proximal; plano frontal."
 },
 {
  titulo:"Luxação de ombro",
- texto:"Aluno realizou arremesso e sentiu deslocamento do ombro.",
- pergunta:"Descreva ossos, plano, posição do braço e relação proximal/distal.",
- resposta:"Úmero e escápula; plano frontal/transversal; lateral; ombro proximal à mão."
+ texto:"Aluno realizou arremesso e braço ficou afastado.",
+ pergunta:"a) Ossos? b) Posição do braço? c) Plano? d) Relação proximal/distal?",
+ resposta:"Úmero e escápula; abdução; frontal; ombro proximal à mão."
 },
 {
  titulo:"Dor lateral cotovelo",
- texto:"Aluno sente dor externa após esforço.",
- pergunta:"Identifique ossos, termo anatômico e posição relativa.",
- resposta:"Úmero, rádio e ulna; lateral; distal ao ombro."
+ texto:"Dor externa após repetição.",
+ pergunta:"a) Ossos? b) Termo? c) Relação com ombro? d) Função?",
+ resposta:"Úmero, rádio e ulna; lateral; distal; flexão/extensão."
 },
 {
  titulo:"Fratura rádio distal",
  texto:"Queda com apoio da mão.",
- pergunta:"Explique osso, termo distal e divisão.",
- resposta:"Rádio distal; distal = mais longe do tronco; apendicular."
+ pergunta:"a) Osso? b) Significado distal? c) Divisão? d) Relação com cotovelo?",
+ resposta:"Rádio; longe do tronco; apendicular; abaixo do cotovelo."
 },
 {
- titulo:"Elevação lateral",
- texto:"Dor ao levantar braço.",
- pergunta:"Identifique plano, eixo e movimento.",
- resposta:"Plano frontal; eixo ântero-posterior; abdução."
+ titulo:"Abdução com dor",
+ texto:"Elevação lateral do braço.",
+ pergunta:"a) Movimento? b) Plano? c) Eixo? d) Ossos?",
+ resposta:"Abdução; frontal; ântero-posterior; úmero/escápula."
 },
 {
  titulo:"Lesão joelho",
- texto:"Mudança brusca de direção.",
- pergunta:"Descreva ossos, plano e relações.",
- resposta:"Fêmur, tíbia, patela; plano sagital; joelho inferior ao quadril e proximal ao pé."
+ texto:"Mudança de direção.",
+ pergunta:"a) Ossos? b) Plano? c) Relação com quadril? d) Com pé?",
+ resposta:"Fêmur, tíbia, patela; sagital; inferior; proximal ao pé."
 },
 {
  titulo:"Fratura tíbia",
  texto:"Impacto direto.",
- pergunta:"Indique posição anatômica e divisão.",
- resposta:"Tíbia; inferior; distal ao fêmur; apendicular."
+ pergunta:"a) Osso? b) Divisão? c) Relação com fêmur? d) Com pé?",
+ resposta:"Tíbia; apendicular; distal ao fêmur; proximal ao pé."
 },
 {
  titulo:"Entorse tornozelo",
  texto:"Pisou em falso.",
- pergunta:"Explique ossos, termo e plano.",
- resposta:"Tíbia, fíbula, tálus; lateral; plano frontal."
+ pergunta:"a) Ossos? b) Termo? c) Plano? d) Função?",
+ resposta:"Tíbia, fíbula, tálus; lateral; frontal; estabilidade."
 },
 {
  titulo:"Fratura fêmur",
  texto:"Queda forte.",
- pergunta:"Descreva posição e divisão.",
- resposta:"Fêmur; inferior ao tronco; apendicular."
+ pergunta:"a) Osso? b) Divisão? c) Relação com tronco? d) Com joelho?",
+ resposta:"Fêmur; apendicular; inferior; proximal ao joelho."
 },
 {
  titulo:"Dor anterior joelho",
- texto:"Dor na frente do joelho.",
- pergunta:"Identifique termo, ossos e plano.",
- resposta:"Anterior; patela, fêmur, tíbia; plano sagital."
+ texto:"Dor na frente.",
+ pergunta:"a) Ossos? b) Termo? c) Plano? d) Eixo?",
+ resposta:"Patela, fêmur, tíbia; anterior; sagital; transversal."
 },
 {
  titulo:"Dor lombar",
- texto:"Após levantamento de peso.",
- pergunta:"Descreva estrutura e divisão.",
- resposta:"Coluna lombar; axial; posterior ao abdome."
+ texto:"Após levantamento.",
+ pergunta:"a) Estrutura? b) Divisão? c) Relação com tórax? d) Abdome?",
+ resposta:"Coluna lombar; axial; inferior ao tórax; posterior ao abdome."
 },
 {
  titulo:"Hipercifose",
- texto:"Ombros projetados à frente.",
- pergunta:"Descreva termos e estrutura.",
- resposta:"Coluna torácica; anteriorização."
+ texto:"Ombros à frente.",
+ pergunta:"a) Estrutura? b) Termo? c) Referência? d) Impacto?",
+ resposta:"Coluna torácica; anteriorização; posição anatômica; alteração biomecânica."
 },
 {
  titulo:"Trauma costelas",
  texto:"Impacto lateral.",
- pergunta:"Identifique ossos e termo.",
- resposta:"Costelas; lateral; axial."
+ pergunta:"a) Ossos? b) Divisão? c) Termo? d) Função?",
+ resposta:"Costelas; axial; lateral; proteção."
 },
 {
  titulo:"Impacto esterno",
  texto:"Trauma frontal.",
- pergunta:"Descreva localização e divisão.",
- resposta:"Esterno; anterior e medial; axial."
+ pergunta:"a) Osso? b) Termos? c) Divisão? d) Função?",
+ resposta:"Esterno; anterior/medial; axial; proteção."
 },
 {
  titulo:"Dor medial",
- texto:"Dor interna joelho.",
- pergunta:"Explique termo e relação.",
- resposta:"Medial; próximo ao plano mediano."
+ texto:"Parte interna.",
+ pergunta:"a) Termo? b) Relação plano mediano? c) Diferença lateral? d) Aplicação?",
+ resposta:"Medial; próximo ao plano; oposto de lateral; orientação clínica."
 },
 {
  titulo:"Dor lateral",
- texto:"Dor externa tornozelo.",
- pergunta:"Explique termo e função.",
- resposta:"Lateral; afastado do plano mediano."
+ texto:"Parte externa.",
+ pergunta:"a) Termo? b) Relação plano mediano? c) Ossos próximos? d) Função?",
+ resposta:"Lateral; afastado; tíbia/fíbula; equilíbrio."
 },
 {
  titulo:"Lesão proximal",
- texto:"Dor perto do ombro.",
- pergunta:"Explique termo e comparação.",
- resposta:"Proximal; próximo ao tronco."
+ texto:"Perto do ombro.",
+ pergunta:"a) Termo? b) Relação tronco? c) Diferença distal? d) Exemplo?",
+ resposta:"Proximal; próximo ao tronco; oposto distal; ombro."
 },
 {
  titulo:"Lesão distal",
- texto:"Dor perto do pé.",
- pergunta:"Explique termo.",
- resposta:"Distal; longe do tronco."
+ texto:"Perto do pé.",
+ pergunta:"a) Termo? b) Relação joelho? c) Diferença proximal? d) Função?",
+ resposta:"Distal; longe do tronco; oposto proximal; locomoção."
 },
 {
- titulo:"Região anterior",
+ titulo:"Anterior",
  texto:"Dor na frente.",
- pergunta:"Explique termo.",
- resposta:"Anterior; frente do corpo."
+ pergunta:"a) Termo? b) Oposto? c) Plano? d) Exemplo?",
+ resposta:"Anterior; posterior; sagital; joelho."
 },
 {
- titulo:"Região posterior",
+ titulo:"Posterior",
  texto:"Dor atrás.",
- pergunta:"Explique termo.",
- resposta:"Posterior; parte de trás."
+ pergunta:"a) Termo? b) Relação? c) Função? d) Impacto?",
+ resposta:"Posterior; oposto anterior; musculatura posterior; movimento."
 },
 {
  titulo:"Posição anatômica",
  texto:"Palmas para trás.",
- pergunta:"Está correto?",
- resposta:"Não; palmas devem estar para frente."
+ pergunta:"a) Correto? b) Correção? c) Importância? d) Impacto?",
+ resposta:"Incorreto; palmas para frente; referência padrão; evita erro."
 },
 {
  titulo:"Flexão tronco",
- texto:"Inclinar para frente.",
- pergunta:"Plano e eixo?",
- resposta:"Sagital; eixo transversal."
+ texto:"Inclinar.",
+ pergunta:"a) Plano? b) Eixo? c) Termo? d) Função?",
+ resposta:"Sagital; transversal; anterior; movimento."
 },
 {
- titulo:"Rotação tronco",
- texto:"Giro do tronco.",
- pergunta:"Plano e eixo?",
- resposta:"Transversal; eixo longitudinal."
+ titulo:"Rotação",
+ texto:"Giro.",
+ pergunta:"a) Plano? b) Eixo? c) Movimento? d) Aplicação?",
+ resposta:"Transversal; longitudinal; rotação; esportes."
 },
 {
  titulo:"Abdução",
  texto:"Braço lateral.",
- pergunta:"Plano e eixo?",
- resposta:"Frontal; eixo ântero-posterior."
+ pergunta:"a) Termo? b) Plano? c) Eixo? d) Ossos?",
+ resposta:"Abdução; frontal; ântero-posterior; úmero."
 },
 {
- titulo:"Movimento joelho",
+ titulo:"Joelho",
  texto:"Flexão/extensão.",
- pergunta:"Plano e eixo?",
- resposta:"Sagital; eixo transversal."
+ pergunta:"a) Plano? b) Eixo? c) Ossos? d) Função?",
+ resposta:"Sagital; transversal; fêmur/tíbia; locomoção."
 },
 {
  titulo:"Salto",
- texto:"Dor ao aterrissar.",
- pergunta:"Descreva ossos e relações.",
- resposta:"Fêmur e tíbia; distal/proximal."
+ texto:"Dor aterrissagem.",
+ pergunta:"a) Ossos? b) Plano? c) Relação pé-joelho? d) Risco?",
+ resposta:"Fêmur/tíbia; sagital; distal/proximal; lesão."
 },
 {
  titulo:"Corrida",
  texto:"Movimentos alternados.",
- pergunta:"Termo anatômico?",
- resposta:"Contralateral."
+ pergunta:"a) Termo? b) Função? c) Coordenação? d) Aplicação?",
+ resposta:"Contralateral; equilíbrio; coordenação; corrida."
 },
 {
- titulo:"Divisão corpo",
+ titulo:"Plano corpo",
  texto:"Linha direita/esquerda.",
- pergunta:"Plano?",
- resposta:"Plano sagital."
+ pergunta:"a) Nome? b) Função? c) Aplicação? d) Exemplo?",
+ resposta:"Plano sagital; divisão; análise; corpo."
 },
 {
- titulo:"Movimento circular",
- texto:"Braço girando.",
- pergunta:"Nome?",
- resposta:"Circundução."
+ titulo:"Circundução",
+ texto:"Movimento circular.",
+ pergunta:"a) Nome? b) Planos? c) Ossos? d) Aplicação?",
+ resposta:"Circundução; múltiplos; ombro; aquecimento."
 },
 {
  titulo:"Lesão combinada",
  texto:"Dor ombro e joelho.",
- pergunta:"Divisões?",
- resposta:"Apendicular superior e inferior."
+ pergunta:"a) Divisões? b) Ossos? c) Termos? d) Análise?",
+ resposta:"Apendicular; úmero/fêmur; proximal/distal; funcional."
 }
 ];
 
 function render(){
-  const c = document.getElementById("casos");
-  CASOS.forEach((caso,i)=>{
-    c.innerHTML += `
-    <div class="card">
-      <h3>Caso ${i+1} – ${caso.titulo}</h3>
-      <p>${caso.texto}</p>
-      <b>Pergunta:</b>
-      <p>${caso.pergunta}</p>
+ const c = document.getElementById("casos");
+ CASOS.forEach((caso,i)=>{
+  c.innerHTML += `
+  <div class="card">
+    <h3>Caso ${i+1} – ${caso.titulo}</h3>
+    <p>${caso.texto}</p>
+    <b>Pergunta:</b>
+    <p>${caso.pergunta}</p>
 
-      <button onclick="mostrar(${i})">Mostrar resposta</button>
-      <div id="r${i}" class="hidden"><b>${caso.resposta}</b></div>
+    <button onclick="mostrar(${i})">Mostrar resposta</button>
+    <div id="r${i}" class="hidden"><b>${caso.resposta}</b></div>
 
-      <textarea id="t${i}" placeholder="Anotação..."></textarea><input type="file" onchange="foto(event,${i})">
-  <img id="img${i}" style="display:none">
+    <textarea id="t${i}" placeholder="Anotação do aluno..."></textarea><input type="file" onchange="foto(event,${i})">
+<img id="img${i}" style="display:none">
 
-  <button onclick="window.print()">Exportar PDF</button>
-</div>`;
+<button onclick="window.print()">Exportar PDF</button>
 
-}); }
-
-function mostrar(i){ const senha = prompt("Digite a senha:"); if(senha === "prof2026"){ document.getElementById("r"+i).classList.remove("hidden"); } else alert("Senha incorreta"); }
+  </div>`;
+ });
+}function mostrar(i){ const senha = prompt("Digite a senha:"); if(senha === "prof2026"){ document.getElementById("r"+i).classList.remove("hidden"); } else alert("Senha incorreta"); }
 
 function foto(e,i){ const file = e.target.files[0]; const img = document.getElementById("img"+i); img.src = URL.createObjectURL(file); img.style.display = "block"; }
 
-// salvar window.addEventListener("input",(e)=>{ if(e.target.tagName === "TEXTAREA"){ localStorage.setItem(e.target.id, e.target.value); } });
+window.addEventListener("input",(e)=>{ if(e.target.tagName === "TEXTAREA"){ localStorage.setItem(e.target.id, e.target.value); } });
 
 window.onload = ()=>{ render(); CASOS.forEach((_,i)=>{ const v = localStorage.getItem("t"+i); if(v) document.getElementById("t"+i).value = v; }); };
 
