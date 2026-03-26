@@ -1,17 +1,15 @@
-const CACHE_NAME = "app-ef-v1";
+// sw.js
+const CACHE_NAME = "anatomia-clinica-v1";
+const URLS = ["./", "./index.html", "./manifest.json"];
 
-self.addEventListener("install", e=>{
-  e.waitUntil(
-    caches.open(CACHE_NAME).then(cache=>{
-      return cache.addAll(["./","./index.html"]);
-    })
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(URLS))
   );
 });
 
-self.addEventListener("fetch", e=>{
-  e.respondWith(
-    caches.match(e.request).then(res=>{
-      return res || fetch(e.request);
-    })
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => response || fetch(event.request))
   );
 });
